@@ -3,6 +3,7 @@ import pic from '../images/pic.jpg'
 import { useNavigate } from 'react-router-dom'
 
 const About = () => {
+    // new 
     const url ="https://server-dccr.onrender.com";
     const history = useNavigate();
     const [userData,setuserData] = useState({});
