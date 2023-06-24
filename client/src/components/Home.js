@@ -4,8 +4,8 @@ const Home = () => {
   const [show, setshow] = useState(false);
   const userContact = async () => {
     try {
-       const url ="https://server-dccr.onrender.com";
-      const res = await fetch(url+'/getdata', {
+       // const url ="https://server-dccr.onrender.com";
+      const res = await fetch('/getdata', {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
