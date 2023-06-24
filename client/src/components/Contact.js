@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 const Contact = () => {
+        const url ="https://server-dccr.onrender.com";
     // const history = useNavigate();
     const [userData, setuserData] = useState({ name: "", email: "", phone: "", message: "" });
     const userContact = async () => {
         try {
-            const res = await fetch('/getdata', {
+            const res = await fetch(url+'/getdata', {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
