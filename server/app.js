@@ -4,9 +4,11 @@ const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
-
 const cors = require("cors");
-app.use(cors());
+
+app.use(cors({
+    origin:'https://client-oys2.onrender.com',
+}));
 
 const cookieParser = require('cookie-parser')
 app.use(cookieParser())
