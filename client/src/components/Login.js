@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { UserContext } from '../App';
 const Login = () => {
-
+    const url ="https://server-dccr.onrender.com";
     const { state, dispatch } = useContext(UserContext);
     const history = useNavigate();
 
@@ -12,7 +12,7 @@ const Login = () => {
     const loginUser = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('/login', {
+        const res = await fetch(url+'/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
