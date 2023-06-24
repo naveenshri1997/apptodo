@@ -3,11 +3,12 @@ import pic from '../images/pic.jpg'
 import { useNavigate } from 'react-router-dom'
 
 const About = () => {
+    const url ="https://server-dccr.onrender.com";
     const history = useNavigate();
     const [userData,setuserData] = useState({});
     const callAboutPage = async () => {
         try {
-            const res = await fetch('/about', {
+            const res = await fetch(url+'/about', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
