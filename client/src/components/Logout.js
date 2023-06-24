@@ -11,7 +11,7 @@ const Logout = () => {
             method: "GET",
             headers: {
                 Accept: "application/json",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "access-control-allow-origin"
             },
             credentials: "include"
