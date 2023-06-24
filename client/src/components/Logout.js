@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../App';
 
 const Logout = () => {
-        const url ="https://server-dccr.onrender.com";
+        // const url ="https://server-dccr.onrender.com";
     const { state, dispatch } = useContext(UserContext);
     const history = useNavigate();
     useEffect(() => {
-        fetch(url+'/logout', {
+        fetch('/logout', {
             method: "GET",
             headers: {
                 Accept: "application/json",
