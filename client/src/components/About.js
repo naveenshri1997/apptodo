@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom'
 
 const About = () => {
     // new 
-    const url ="https://server-dccr.onrender.com";
     const history = useNavigate();
     const [userData,setuserData] = useState({});
     const callAboutPage = async () => {
         try {
+        const url ="https://server-dccr.onrender.com";
             const res = await fetch(url+'/about', {
                 method: "GET",
                 headers: {
