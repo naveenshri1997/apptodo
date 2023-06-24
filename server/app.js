@@ -7,7 +7,9 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-    origin:'*',
+    allowedHeaders:"*",
+    allowMethods:"*",
+    origin:"*",
 }));
 
 const cookieParser = require('cookie-parser')
