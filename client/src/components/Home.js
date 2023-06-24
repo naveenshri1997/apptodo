@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 const Home = () => {
-  const url ="https://server-dccr.onrender.com";
   const [userName, setuserName] = useState('');
   const [show, setshow] = useState(false);
   const userContact = async () => {
     try {
+       const url ="https://server-dccr.onrender.com";
       const res = await fetch(url+'/getdata', {
         method: "GET",
         headers: {
