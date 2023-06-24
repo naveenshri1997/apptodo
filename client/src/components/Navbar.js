@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import pic from "../images/pic.jpg";
 import { UserContext } from '../App';
 const Navbar = () => {
+        const url ="https://server-dccr.onrender.com";
     const { state, dispatch } = useContext(UserContext);
 
     const RenderMenu = () => {
