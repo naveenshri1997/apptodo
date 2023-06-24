@@ -7,7 +7,7 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-    origin:'https://client-oys2.onrender.com',
+    origin:'*',
 }));
 
 const cookieParser = require('cookie-parser')
