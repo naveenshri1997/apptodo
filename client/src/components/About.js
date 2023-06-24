@@ -8,8 +8,8 @@ const About = () => {
     const [userData,setuserData] = useState({});
     const callAboutPage = async () => {
         try {
-        const url ="https://server-dccr.onrender.com";
-            const res = await fetch(url+'/about', {
+        // const url ="https://server-dccr.onrender.com";
+            const res = await fetch('/about', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
