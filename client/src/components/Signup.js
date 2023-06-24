@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 const Signup = () => {
+        const url ="https://server-dccr.onrender.com";
     const history = useNavigate();
     const [user, setUser] = useState({
         name: '',
@@ -22,7 +23,7 @@ const Signup = () => {
     const PostData = async (e) => {
         e.preventDefault();
         const {name,email,phone,work,password,cpassword} = user;
-        const res = await fetch("/register",{
+        const res = await fetch(url+"/register",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
