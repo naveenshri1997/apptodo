@@ -5,7 +5,7 @@ const Home = () => {
   const userContact = async () => {
     try {
        // const url ="https://server-dccr.onrender.com";
-      const res = await fetch('https://server-dccr.onrender.com/getdata', {
+      const res = await fetch('https://client-oys2.onrender.com/getdata', {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
