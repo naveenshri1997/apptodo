@@ -102,6 +102,7 @@ router.post('/login', async (req, res) => {
 router.get('/about',(req, res) => {
     console.log("HELLO FROM ABOUT PAGE");
     res.send(req.rootUser);
+    console.log(req.rootUser);
 })
 
 router.get('/getdata', authenticate, (req, res) => {
