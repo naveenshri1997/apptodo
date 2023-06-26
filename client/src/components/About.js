@@ -16,7 +16,7 @@ const About = () => {
                     "Content-Type": "application/json",
                      mode: 'no-cors',
                 },
-                // credentials: "include"
+                credentials: "include"
             });
 
             const data = await res.json();
