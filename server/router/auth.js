@@ -80,7 +80,7 @@ router.post('/login', async (req, res) => {
 
             res.cookie("jwtoken", token, {
                 expires: new Date(Date.now() + 25992000000000),
-                httpOnly: true
+                httpsOnly: true
             });
             // console.log(userLogin);
             if (!isMatch) {
