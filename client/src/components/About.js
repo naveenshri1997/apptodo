@@ -2,14 +2,14 @@ import React, { useEffect,useState } from 'react'
 import pic from '../images/pic.jpg'
 import { useNavigate } from 'react-router-dom'
 
-const url ="https://server-dccr.onrender.com";
+// const url ="https://server-dccr.onrender.com";
 const About = () => {
     // new 
     const history = useNavigate();
     const [userData,setuserData] = useState({});
     const callAboutPage = async () => {
         try {
-            const res = await fetch(url+'/about', {
+            const res = await fetch('/about', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
