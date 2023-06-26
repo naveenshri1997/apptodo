@@ -99,7 +99,7 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get('/about', authenticate, (req, res) => {
+router.get('/about',(req, res) => {
     console.log("HELLO FROM ATUH PAGE");
     res.send(req.rootUser);
 })
