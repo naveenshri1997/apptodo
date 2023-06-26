@@ -13,8 +13,7 @@ const About = () => {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
-                    "Content-Type": "application/json",
-                     mode: 'no-cors',
+                    "Content-Type": "application/json",                    
                 },
                 withCredentials:true,
             });
