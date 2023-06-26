@@ -8,7 +8,8 @@ const Home = () => {
       const res = await fetch(url+'/getdata', {
         method: "GET",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+           mode: 'no-cors',
         },
       });
 
