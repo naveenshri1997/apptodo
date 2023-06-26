@@ -100,12 +100,12 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/about',(req, res) => {
-    console.log("HELLO FROM ATUH PAGE");
+    console.log("HELLO FROM ABOUT PAGE");
     res.send(req.rootUser);
 })
 
 router.get('/getdata', authenticate, (req, res) => {
-    console.log("HELLO FROM ATUH PAGE");
+    console.log("HELLO FROM GETDATA PAGE");
     res.send(req.rootUser);
 })
 
@@ -131,7 +131,7 @@ router.post('/contact', authenticate, async (req, res) => {
 })
 
 router.get('/logout', (req, res) => {
-    console.log("HELLO FROM ATUH PAGE");
+    console.log("HELLO FROM LOGOUT PAGE");
     res.clearCookie('jwtoken',{path:'/'})
     res.status(200).send("user logout");
 })
