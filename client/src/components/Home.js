@@ -5,7 +5,7 @@ const Home = () => {
   const [show, setshow] = useState(false);
   const userContact = async () => {
     try {
-      const res = await fetch(url+'getdata', {
+      const res = await fetch(url+'/getdata', {
         method: "GET",
         headers: {
           "Content-Type": "application/json"
