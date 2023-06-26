@@ -99,7 +99,7 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get('/about',(req, res) => {
+router.get('/about',authenticate,(req, res) => {
     console.log("HELLO FROM ABOUT PAGE");
     res.send(req.rootUser);
     console.log(req.rootUser);
