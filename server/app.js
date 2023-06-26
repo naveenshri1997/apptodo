@@ -1,9 +1,9 @@
 const dotenv = require("dotenv");
 // const bodyParser = require('body-parser')
-
 const mongoose = require('mongoose');
 const express = require('express');
 const cors = require("cors");
+const cookieParser = require('cookie-parser')
 const app = express();
 
 app.use(cors({
@@ -12,7 +12,6 @@ app.use(cors({
     origin:"*",
 }));
 
-const cookieParser = require('cookie-parser')
 app.use(cookieParser())
 dotenv.config({path:'./config.env'});
 require('./db/conn');
