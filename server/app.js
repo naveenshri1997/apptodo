@@ -6,10 +6,9 @@ const cors = require("cors");
 const cookieParser = require('cookie-parser')
 const app = express();
 
-app.use(cors({
-    allowedHeaders:"*",
-    allowMethods:"*",
-    origin:"*",
+app.use("*",cors({
+    origin:true,
+    Credentials:true,
 }));
 
 app.use(cookieParser())
