@@ -18,10 +18,10 @@ dotenv.config({path:'./config.env'});
 require('./db/conn');
 
 app.use(express.json());
-// app.use( bodyParser.json() );       // to support JSON-encoded bodies
-// app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-//   extended: true
-// })); 
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 app.use(require('./router/auth'));  
 // const User = require('./model/userSchema');
 const PORT = process.env.PORT || 5000;
