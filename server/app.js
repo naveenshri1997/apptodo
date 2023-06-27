@@ -11,7 +11,7 @@ app.use("*",cors({
     Credentials:true,
 }));
 
-app.use(cookieParser())
+app.use(cookieParser());
 dotenv.config({path:'./config.env'});
 require('./db/conn');
 
