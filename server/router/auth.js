@@ -81,7 +81,7 @@ router.post('/login', async (req, res) => {
             res.cookie("jwtoken", token, {
                 expires: new Date(Date.now() + 25992000000000),
                 httpOnly: true,
-                secure: process.env.NODE_ENV === "production"
+                // secure: process.env.NODE_ENV === "production"
             });
             // console.log(userLogin);
             if (!isMatch) {
