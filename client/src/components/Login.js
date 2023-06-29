@@ -14,9 +14,8 @@ const Login = () => {
 
         const res = await fetch('https://server-dccr.onrender.com/login', {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",            
-            },withCredentials: true,            
+            headers: {"Content-Type": "application/json"},
+                      withCredentials: true,            
             body: JSON.stringify({
                 email,
                 password
