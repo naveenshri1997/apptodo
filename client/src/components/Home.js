@@ -9,7 +9,7 @@ const Home = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-        },
+        },withCredentials: true, 
       });
 
       const data = await res.json();
