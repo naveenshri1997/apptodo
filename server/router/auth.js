@@ -78,6 +78,10 @@ router.post('/login', async (req, res) => {
             let token = await userLogin.generateAuthToken();
             console.log("login time token ==",token);
 
+            
+   res.setHeader('Set-Cookie', `jwtoken=${token}`);
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+
             res.cookie('jwtoken',token, {
                 expires: new Date(Date.now() + 25992000000000),
                 httpOnly: true,
