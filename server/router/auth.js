@@ -84,6 +84,7 @@ router.post('/login', async (req, res) => {
                 // SameSite = SameSiteMode.None,
                 // Secure = true
             });
+            res.send('Cookie have been saved successfully');
             // console.log(userLogin);
             if (!isMatch) {
                 res.status(400).json({ error: "error math" });
