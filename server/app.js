@@ -10,12 +10,13 @@ const app = express();
 //     origin:true,
 //     Credentials:true,
 // }));
-app.use(
-    cors({
-      origin: "https://server-dccr.onrender.com",
-      credentials: true,
-    })
-);
+// app.use(
+//     cors({
+//       origin: "https://server-dccr.onrender.com",
+//       credentials: true,
+//     })
+// );
+app.use(cors());
 
 app.use(cookieParser());
 dotenv.config({path:'./config.env'});
