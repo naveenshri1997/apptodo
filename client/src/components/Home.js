@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-const url ="https://server-dccr.onrender.com";
+// const url ="https://server-dccr.onrender.com";
 const Home = () => {
   const [userName, setuserName] = useState('');
   const [show, setshow] = useState(false);
   const userContact = async () => {
     try {
-      const res = await fetch(url+'/getdata', {
+      const res = await fetch('https://server-dccr.onrender.com/getdata', {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
