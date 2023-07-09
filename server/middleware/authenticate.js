@@ -5,7 +5,6 @@ const Authenticate = async (req, res, next) => {
    
     try {
         const token = req.cookies.jwtoken;
-       // const token = req.header("x-auth-token");
         console.log("TOKEN =",token);
         const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
         const rootUser = await User.findOne({
