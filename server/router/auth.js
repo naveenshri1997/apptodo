@@ -82,8 +82,6 @@ router.post('/login', async (req, res) => {
                 expires: new Date(Date.now() + 25992000000000),
                 httpOnly: true,
                secure: true,
-        httpOnly: true,
-        sameSite: 'lax'
             });    
            
             // console.log(userLogin);
