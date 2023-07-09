@@ -78,13 +78,13 @@ router.post('/login', async (req, res) => {
             let token = await userLogin.generateAuthToken();
             console.log("login time token ==",token);
 
-            res.cookie("jwtoken", token, {
+            res.cookie('jwtoken',token, {
                 expires: new Date(Date.now() + 25992000000000),
                 httpOnly: true,
-                // SameSite = SameSiteMode.None,
-                // Secure = true
-            });
-            res.send('Cookie have been saved successfully');
+               secure: true,
+        httpOnly: true,
+        sameSite: 'lax'
+            });            
             // console.log(userLogin);
             if (!isMatch) {
                 res.status(400).json({ error: "error math" });
