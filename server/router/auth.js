@@ -84,7 +84,8 @@ router.post('/login', async (req, res) => {
                secure: true,
         httpOnly: true,
         sameSite: 'lax'
-            });            
+            });    
+            res.end();
             // console.log(userLogin);
             if (!isMatch) {
                 res.status(400).json({ error: "error math" });
