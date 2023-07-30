@@ -5,18 +5,12 @@ const express = require('express');
 const cors = require("cors");
 const cookieParser = require('cookie-parser')
 const app = express();
-
-// app.use("*",cors({
-//     origin:true,
-//     Credentials:true,
-// }));
-// app.use(
-//     cors({
-//       origin: "https://server-dccr.onrender.com",
-//       credentials: true,
-//     })
-// );
 app.use(cors());
+app.use(
+    cors({
+      origin: "https://client-oys2.onrender.com/",
+    })
+);
 
 app.use(cookieParser());
 dotenv.config({path:'./config.env'});
