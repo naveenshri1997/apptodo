@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(
     cors({
-      origin: "https://client-oys2.onrender.com/",
+      origin: "https://client-oys2.onrender.com",
     })
 );
 
